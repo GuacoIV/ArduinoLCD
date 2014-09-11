@@ -1,4 +1,5 @@
 // include LCD library
+// send to hkamra1@tigers.lsu.edu
 #include <LiquidCrystal.h>
 
 // initialize the library with the numbers of the interface pins
