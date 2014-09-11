@@ -19,14 +19,9 @@ void loop(){
  exit(0);
 }
 
-
-
 void LCD_Init(){
   // set up LCD's number of columns and rows
   lcd.begin(16,2);
-  
-  //a. Whatever bus mode you selected in your design. 
-  // ???
   
   //b. Display on.
   lcd.display(); 
@@ -38,13 +33,12 @@ void LCD_Init(){
   lcd.noBlink();
   
   //f. No display shift.
-
  }
  
 void LCD_Display(){
-   //Print to LCD.
-   // *****Still need to center it.
-   lcd.setCursor(topPos,0);
+  //Print to LCD.
+  // *****Still need to center it.
+  lcd.setCursor(topPos,0);
   lcd.print("LSU");
   lcd.setCursor(bottomPos, 1);
   lcd.print("Go Tigers!");
@@ -54,9 +48,7 @@ void LCD_Display(){
   
   //Scroll the upper row to the right and the bottom row to the left until
   //the messages disappear at the end of the respective row
-  // *****number of scrolls will need to be adjusted
-  // ***** also, not sure how to scroll a specific row and not the entire display...
-  // perhaps we will have to set the cursor?
+
   String geaux = "Geaux Tigers!";
   int j = 0;
   for (int i = 0; i < 16; i ++)
@@ -67,7 +59,7 @@ void LCD_Display(){
     if (bottomPos - 1 >= 0)
     {
       lcd.setCursor(--bottomPos, 1);
-          lcd.print(geaux);
+      lcd.print(geaux);
     }
     else
     {
